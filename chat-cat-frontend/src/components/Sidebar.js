@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Tab, Nav} from 'react-bootstrap'
+import Conversations from './Conversations'
 
 const CONVERSATIONS_KEY = "conversation"
 const CONTACTS_KEY = "contacts"
@@ -20,7 +21,7 @@ const Sidebar = ({id}) => {
                 </Nav>
                 <Tab.Content>
                     <Tab.Pane eventKey={CONVERSATIONS_KEY}>
-                        //Conversations Component Will Go Here
+                        <Conversations />
                     </Tab.Pane>
                     <Tab.Pane eventKey={CONTACTS_KEY}>
                         Contacts Component Will go Here
