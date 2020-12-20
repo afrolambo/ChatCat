@@ -8,7 +8,6 @@ export default function Dashboard({ id }) {
             <div className="d-flex" style={{ height: '100vh' }}>
                 <Sidebar id={id} />
             </div>
-            <Welcome />
         </div>
     )
 }

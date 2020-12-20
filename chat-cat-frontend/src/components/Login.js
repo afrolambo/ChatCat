@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import  { Container, Form, Button } from 'react-bootstrap'
 import { v4 as uuidV4 } from 'uuid'
+import Welcome from './Welcome'
 
 const Login = ({onSubmitId}) => {
     const idRef = useRef()
