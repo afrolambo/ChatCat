@@ -5,13 +5,13 @@ const Welcome = () => {
         <div className="catHead">
 
             <div className="eyes">
-                <div className="eyes">
+                <div className="eye">
                     <div className="ball"> </div>
                 </div>
             </div>
 
             <div className="eyes">
-                <div className="eyes">
+                <div className="eye">
                     <div className="ball"> </div>
                 </div>
             </div>

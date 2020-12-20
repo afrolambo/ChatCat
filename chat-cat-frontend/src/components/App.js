@@ -2,7 +2,8 @@ import React from 'react'
 import Login from './Login'
 import useLocalStorage from '../hooks/useLocalStorage'
 import Dashboard from './Dashboard'
-import '../CSS/App.css';
+// import Welcome from './Welcome'
+
 
 function App() {
   const [id, setId] = useLocalStorage('id')
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
       <h2>Chat Cat</h2>
-      {id ? <Dashboard id={id} /> : <Login onSubmitId={setId} />}
+      {id ? <Dashboard id={id} /> : <Login onSubmitId={setId} /> }
     </>
   )
 }
