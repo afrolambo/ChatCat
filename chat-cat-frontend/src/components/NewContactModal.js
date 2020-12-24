@@ -7,6 +7,9 @@ const NewContactModal = ({ closeModal }) => {
 
     function handleSubmit(e) {
         e.preventDefault();
+
+        // createContact(idRef.current.value, nameRef.current.value)
+        closeModal()
     }
     return (
         <>
@@ -21,6 +24,7 @@ const NewContactModal = ({ closeModal }) => {
                         <Form.Label>Name</Form.Label>
                         <Form.Control type="text" ref={nameRef} required/>
                     </Form.Group>
+                    <Button type="submit" >Create</Button>
                 </Form>
             </Modal.Body>
         </>
