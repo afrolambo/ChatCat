@@ -1,10 +1,9 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { useConversations } from '../contexts/ConversationsProvider'
 
 export default function OpenConversation() {
     const [text, setText] = useState('')
-    const lastMessageRef = useRef()
     const setRef = useCallback(node => {
         if (node) {
             node.scrollIntoView({ smooth: true})
@@ -21,12 +20,6 @@ export default function OpenConversation() {
         )
         setText('')
     }
-
-    useEffect(() => {
-        if (lastMessageRef.current) {
-            lastMessage.current.scrollIntoView({smooth: true})
-        }
-    })
 
     return (
         <div className="d-flex flex-column flex-grow-1">
