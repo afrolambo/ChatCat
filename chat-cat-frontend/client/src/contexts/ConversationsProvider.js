@@ -94,7 +94,7 @@ function arrayEquality(arr1, arr2){
     arr1.sort()
     arr2.sort()
 
-    return a.every((element, index) => {
-        return element === b[index]
+    return arr1.every((element, index) => {
+        return element === arr2[index]
     })
 }
