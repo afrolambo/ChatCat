@@ -6,10 +6,11 @@ export function useSocket(){
     return useContext(SocketContext)
 }
 
-export function SocketProvider() {
+export function SocketProvider({id, children}) {
+    const [socket, setSocket] = useState()
     return (
-        <div>
-            
-        </div>
+        <SocketContext.Provider value{socket}>
+            {children}
+        </SocketContext.Provider>
     )
 }
