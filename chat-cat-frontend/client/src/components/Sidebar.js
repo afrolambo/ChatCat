@@ -5,17 +5,16 @@ import Contacts from './Contacts'
 import NewConversationModal from './NewConversationModal'
 import NewContactModal from './NewContactModal'
 
-
 const CONVERSATIONS_KEY = "conversation"
 const CONTACTS_KEY = "contacts"
 
-const Sidebar = ({id}) => {
+export default function Sidebar({id}) {
     const [activeKey, setActiveKey] = useState(CONVERSATIONS_KEY)
     const [modalOpen, setModalOpen] = useState(false)
     const conversationsOpen = activeKey === CONVERSATIONS_KEY
 
     function closeModal() {
-        setModalOpen = false
+        setModalOpen(false)
     }
 
     return (
@@ -28,7 +27,6 @@ const Sidebar = ({id}) => {
                     <Nav.Item>
                         <Nav.Link eventKey={CONTACTS_KEY}>Contacts</Nav.Link>
                     </Nav.Item>
-                    
                 </Nav>
                 <Tab.Content className="border-right overflow-auto flex-grow-1">
                     <Tab.Pane eventKey={CONVERSATIONS_KEY}>
@@ -37,7 +35,6 @@ const Sidebar = ({id}) => {
                     <Tab.Pane eventKey={CONTACTS_KEY}>
                         <Contacts />
                     </Tab.Pane>
-
                 </Tab.Content>
                 <div className="p-2 border-top border-right small">
                     Your Id: <span className="text-muted">{id}</span>
@@ -56,5 +53,3 @@ const Sidebar = ({id}) => {
         </div>
     );
 }
-
-export default Sidebar;

@@ -33,6 +33,7 @@ export function ConversationsProvider( { id, children } ) {
                         messages: [...conversation.messages, newMessage]
                     }
                 }
+
                 return conversation
             })
 
@@ -48,7 +49,7 @@ export function ConversationsProvider( { id, children } ) {
     }, [setConversations])
 
     useEffect(() => {
-        if (socket === null) return 
+        if (socket == null) return 
 
         socket.on('receive-message', addMessageToConversation)
 
