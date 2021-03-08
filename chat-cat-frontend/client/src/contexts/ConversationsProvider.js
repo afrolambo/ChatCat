@@ -58,6 +58,7 @@ export function ConversationsProvider( { id, children } ) {
 
     function sendMessage({ recipients, text }) {
         socket.emit('send-message', { recipients, text })
+        
         addMessageToConversation({ recipients, text, sender: id })
     }
 

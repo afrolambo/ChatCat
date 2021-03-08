@@ -2,8 +2,9 @@ import React from 'react';
 import { ListGroup } from 'react-bootstrap'
 import { useConversations } from '../contexts/ConversationsProvider'
 
-const Conversations = () => {
+export default function Conversations () {
     const { conversations, selectConversationIndex } = useConversations()
+
     return (
         <ListGroup variant="flush">
             {conversations.map((conversation, index) => (
@@ -19,5 +20,3 @@ const Conversations = () => {
         </ListGroup>
     );
 }
-
-export default Conversations;
