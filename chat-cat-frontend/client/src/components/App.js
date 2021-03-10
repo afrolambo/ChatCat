@@ -10,7 +10,8 @@ function App() {
   return (
     <>
       <h2>Chat Cat</h2>
-      <Login />
+      {id}
+      <Login onIdSubmit={setId} />
     </>
   )
 }
