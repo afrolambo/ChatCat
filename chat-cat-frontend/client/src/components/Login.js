@@ -3,16 +3,16 @@ import  { Container, Form, Button } from 'react-bootstrap'
 import { v4 as uuidV4 } from 'uuid'
 
 
-const Login = ({onSubmitId}) => {
+const Login = ({onIdSubmit}) => {
     const idRef = useRef()
 
     function handleSubmit(e) {
         e.preventDefault()
-        onSubmitId(idRef.current.value)
+        onIdSubmit(idRef.current.value)
     }
 
     function createNewId() {
-        onSubmitId(uuidV4())
+        onIdSubmit(uuidV4())
     }
 
     return (
