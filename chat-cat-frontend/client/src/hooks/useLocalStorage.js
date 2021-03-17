@@ -4,9 +4,14 @@ const PREFIX = 'ChatCat-'
 
 export default function useLocalStorage(key, initialValue) {
 
-    return (
-        <div>
-            
-        </div>
-    )
+    const prefixedKey = PREFIX + key
+    const [value, setValue] = useState(() => {
+        const jsonValue = localStorage.getItem(prefixedKey)
+        if (jsonValue != null) return JSON.parse(jsonValue)
+        if (typeOf initialValue === 'function') {
+            return initialValue()
+        } else {
+            return initialValue 
+        }
+    })
 }
