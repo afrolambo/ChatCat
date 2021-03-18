@@ -6,7 +6,7 @@ import useLocalStorage from '../hooks/useLocalStorage'
 
 
 function App() {
-  const [id, setId] = useState('id')
+  const [id, setId] = useLocalStorage('id')
   
   return (
     <>
