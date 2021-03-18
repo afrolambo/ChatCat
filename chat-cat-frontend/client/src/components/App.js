@@ -1,6 +1,7 @@
 import React from 'react'
 import Login from './Login'
 import useLocalStorage from '../hooks/useLocalStorage'
+import Dashboard from './Dashboard'
 
 // import Welcome from './Welcome'
 
@@ -11,8 +12,8 @@ function App() {
   return (
     <>
       <h2>Chat Cat</h2>
-      {id}
-      <Login onIdSubmit={setId} />
+      {id ? <Dashboard id={id} /> :  <Login onIdSubmit={setId} />}
+     
     </>
   )
 }
