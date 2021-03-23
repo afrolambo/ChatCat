@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Login from './Login'
 import useLocalStorage from '../hooks/useLocalStorage'
 import Dashboard from './Dashboard'
@@ -7,7 +7,7 @@ import Dashboard from './Dashboard'
 
 
 function App() {
-  const [id, setId] = useLocalStorage('id')
+  const [id, setId] = useState()
   
   return (
     <>
