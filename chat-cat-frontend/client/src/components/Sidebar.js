@@ -5,8 +5,8 @@ import {Tab, Nav, Button, Modal} from 'react-bootstrap'
 // import NewConversationModal from './NewConversationModal'
 // import NewContactModal from './NewContactModal'
 
-// const CONVERSATIONS_KEY = "conversation"
-// const CONTACTS_KEY = "contacts"
+const CONVERSATIONS_KEY = "conversation"
+const CONTACTS_KEY = "contacts"
 
 export default function Sidebar({id}) {
     // const [activeKey, setActiveKey] = useState(CONVERSATIONS_KEY)
@@ -20,7 +20,14 @@ export default function Sidebar({id}) {
     return (
         <div style={{width: '250px'}} className="d-flex flex-column">
            <Tab.Container>
-               
+               <Nav>
+                   <Nav.Item>
+                       <Nav.Link eventKey={CONVERSATIONS_KEY}>Conversations</Nav.Link>
+                   </Nav.Item>
+                   <Nav.Item>
+                       <Nav.Link eventKey={CONTACTS_KEY}>Contacts</Nav.Link>
+                   </Nav.Item>
+               </Nav>
            </Tab.Container>
 
             <Modal show={modalOpen} onHide={closeModal} >
