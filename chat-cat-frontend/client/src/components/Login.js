@@ -8,7 +8,7 @@ export default function Login() {
             <Form>
                 <Form.Group>
                     <Form.Label>Enter Your ID</Form.Label>
-                    <Form.Control type="text" ref={idRef}></Form.Control>
+                    <Form.Control type="text" ref={idRef} required />
                 </Form.Group>
             </Form>
         </Container>
