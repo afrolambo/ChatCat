@@ -1,5 +1,5 @@
 import React, {useRef} from 'react'
-import { Container, Form } from 'react-bootstrap'
+import { Container, Form, Button } from 'react-bootstrap'
 
 export default function Login() {
     const idRef = useRef()
@@ -11,6 +11,7 @@ export default function Login() {
                     <Form.Label>Enter Your Id</Form.Label>
                     <Form.Control type="text" ref={idRef} required />
                 </Form.Group>
+                <Button>Login</Button>
             </Form>
         </Container>
     )
