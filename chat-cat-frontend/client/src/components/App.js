@@ -1,14 +1,17 @@
 import React from 'react'
 import Login from './Login'
+import { Container} from 'react-bootstrap'
 
 function App() {
   
   return (
     <div>
-      <h2>Chat Cat</h2>
-      <div className="align-items-center d-flex" style={{ height: '100vh' }}>
+      <Container>
+        <h2>Chat Cat</h2>
+      </Container>
+      <Container>
         <Login />
-      </div>
+      </Container>
     </div>
   )
 }

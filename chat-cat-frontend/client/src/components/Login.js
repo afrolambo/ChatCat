@@ -11,7 +11,7 @@ export default function Login() {
                     <Form.Label>Enter Your Id</Form.Label>
                     <Form.Control type="text" ref={idRef} required />
                 </Form.Group>
-                <Button type="submit">Login</Button>
+                <Button type="submit" className="mr-2">Login</Button>
                 <Button variant="secondary">Creat a New Id</Button>
             </Form>
         </Container>
