@@ -11,7 +11,7 @@ function App() {
         <h2>Chat Cat</h2>
       </Container>
       <Container>
-        <Login setId={setId}/>
+        <Login onIdSubmit={setId}/>
       </Container>
     </div>
   )

@@ -1,13 +1,13 @@
 import React, {useRef} from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
 
-export default function Login() {
+export default function Login({ onIdSubmit }) {
     const idRef = useRef()
 
     function handleSubmit(e){
         e.preventDefault()
 
-        
+
     }
 
     return (
