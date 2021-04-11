@@ -3,6 +3,7 @@ import Login from './Login'
 import { Container} from 'react-bootstrap'
 
 function App() {
+  const [id, setId] = useState()
   
   return (
     <div>
@@ -10,7 +11,7 @@ function App() {
         <h2>Chat Cat</h2>
       </Container>
       <Container>
-        <Login />
+        <Login setId={setId}/>
       </Container>
     </div>
   )
